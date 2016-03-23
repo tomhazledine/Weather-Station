@@ -9,8 +9,8 @@ import sys
 
 newstring = 'Tom'
 
-for line in sys.stdin:
-	print line
+# for line in sys.stdin:
+	# print line
 	# parsedLine = json.loads(line)
 	# print parsedLine
 
@@ -20,15 +20,15 @@ for line in sys.stdin:
 # parsed_json = json.loads(json_string)
 # # print(parsed_json['first_name'])
 
-# # Test JSON output:
-# data = {
-#     'first_name': newstring,
-#     'second_name': 'Hazledine',
-#     'titles': ['Tinkerer', 'Developer'],
-# }
+# Test JSON output:
+data = {
+    'first_name': newstring,
+    'second_name': 'Hazledine',
+    'titles': ['Tinkerer', 'Developer'],
+}
 
-# data['middle_name'] = 'Frederick';
+data['middle_name'] = 'Frederick';
 
-# print(json.dumps(data))
+print(json.dumps(data))
 
 # print('test.py finished.')
