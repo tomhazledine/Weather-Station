@@ -56,7 +56,7 @@ function runPython(){
       var time = Date.now();
       time = time.toString();
 
-      var outputMessage = `${time},${rawMessage.first_name},${rawMessage.middle_name},${rawMessage.last_name}`;
+      var outputMessage = time + ',' + rawMessage.first_name + ',' + rawMessage.middle_name + ',' + rawMessage.last_name;
 
       writeMessage(outputMessage);
 
