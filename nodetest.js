@@ -80,7 +80,7 @@ function writeMessage(message){
         }
     });
 
-    fs.appendFile('./logs/logfile.csv',`${message.trim()}\n`,function(err) {
+    fs.appendFile('./logs/logfile.csv', message.trim() + '\n',function(err) {
         if (err) {
             process.stdout.write(err);
         } else {
