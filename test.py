@@ -23,7 +23,7 @@ newstring = 'Tom'
 # Test JSON output:
 data = {
     'first_name': newstring,
-    'second_name': 'Hazledine',
+    'last_name': 'Hazledine',
     'titles': ['Tinkerer', 'Developer'],
 }
 
