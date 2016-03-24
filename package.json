@@ -1,0 +1,24 @@
+{
+  "name": "weather-station-test",
+  "version": "1.0.0",
+  "description": "A repo for storing my (very basic) attempts to connect some real-world sensors to the internet.",
+  "main": "nodetest.js",
+  "dependencies": {
+    "cron": "^1.1.0",
+    "python-shell": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhazledine/Weather-Station.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomhazledine/Weather-Station/issues"
+  },
+  "homepage": "https://github.com/tomhazledine/Weather-Station#readme"
+}
