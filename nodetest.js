@@ -47,7 +47,7 @@ function checkFolder(){
 
 function runPython(){
     // Run our python script
-    var pyshell = new PythonShell('test.py');
+    var pyshell = new PythonShell('weather.py');
 
     pyshell.on('message', function (message) {
       // received a message sent from the Python script (a simple "print" statement)
@@ -56,7 +56,7 @@ function runPython(){
       var time = Date.now();
       time = time.toString();
 
-      var outputMessage = time + ',' + rawMessage.first_name + ',' + rawMessage.middle_name + ',' + rawMessage.last_name;
+      var outputMessage = time + ',' + rawMessage.temp + ',' + rawMessage.humidity + ',' + rawMessage.pressure;
 
       writeMessage(outputMessage);
 
@@ -75,7 +75,7 @@ function writeMessage(message){
         if (err == null) {
             process.stdout.write('Found existing logfile.csv\n');
         } else {
-            fs.writeFileSync('./logs/logfile.csv','time,first_name,middle_name,last_name\n');
+            fs.writeFileSync('./logs/logfile.csv','time,temp,humidity,pressure\n');
             process.stdout.write('Created new logfile.csv\n');        
         }
     });
