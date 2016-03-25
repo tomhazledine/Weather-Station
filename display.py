@@ -90,7 +90,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-white True:
+while True:
     for image in images:
         sense.set_pixels(image)
         time.sleep(1)
