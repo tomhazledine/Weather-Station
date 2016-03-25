@@ -45,7 +45,7 @@ e,e,e,b,e,e,e,e,
 e,e,e,e,e,e,e,e
 ]
 
-sense.set_pixels(image)
+sense.set_pixels(tick)
 time.sleep(.2)
 sense.clear()
 
