@@ -13,7 +13,7 @@ i = [75, 0, 130]
 v = [159, 0, 255]
 e = [0, 0, 0]  # e stands for empty/black
 
-images[0] = [
+image0 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
@@ -24,7 +24,7 @@ e,e,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[1] = [
+image1 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
@@ -35,7 +35,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[2] = [
+image2 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
@@ -46,7 +46,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[3] = [
+image3 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
@@ -57,7 +57,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[4] = [
+image4 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
@@ -68,7 +68,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[5] = [
+image5 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 e,e,e,e,r,e,e,e,
@@ -79,7 +79,7 @@ e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
 
-images[5] = [
+image6 = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,r,e,e,e,
 e,e,e,r,g,r,e,e,
@@ -89,6 +89,8 @@ e,e,w,e,r,e,e,e,
 e,w,e,e,e,e,e,e,
 w,e,e,e,e,e,e,e
 ]
+
+images = [image0,image1,image2,image3,image4,image5,image6]
 
 while True:
     for image in images:
