@@ -6,12 +6,12 @@ sense = SenseHat()
 sense.clear()
 
 # Attempt to get sensor reading.
-    temp = sense.get_temperature()
-    temp = round(temp, 1)
-    humidity = sense.get_humidity()
-    humidity = round(humidity, 1)
-    pressure = sense.get_pressure()
-    pressure = round(pressure, 1)
+temp = sense.get_temperature()
+temp = round(temp, 1)
+humidity = sense.get_humidity()
+humidity = round(humidity, 1)
+pressure = sense.get_pressure()
+pressure = round(pressure, 1)
 
 data = {
     'temp': temp,
