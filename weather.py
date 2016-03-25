@@ -46,6 +46,6 @@ e,e,e,e,e,e,e,e
 ]
 
 sense.set_pixels(tick)
-time.sleep(.2)
+time.sleep(1)
 sense.clear()
 

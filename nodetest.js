@@ -11,7 +11,7 @@ var fs = require('fs');
  * 30 seconds.
  * ----------------
  */
-var testCron = new CronJob('1,16,31,46 * * * * *',function(){
+var testCron = new CronJob('* 1 * * * *',function(){
     checkFolder();
 }, null, true, 'Europe/London');
 testCron.start();
