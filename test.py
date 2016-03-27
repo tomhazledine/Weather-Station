@@ -1,13 +1,9 @@
 import json
 
-newstring = 'Tom'
-
 data = {
-    'first_name': newstring,
-    'last_name': 'Hazledine',
-    'titles': ['Tinkerer', 'Developer'],
+    'temp': 23.7,
+    'humidity': 53.9,
+    'pressure': 1019.2
 }
-
-data['middle_name'] = 'Frederick';
 
 print(json.dumps(data))

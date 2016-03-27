@@ -19,8 +19,6 @@ data = {
     'pressure': pressure
 }
 
-data['middle_name'] = 'Frederick';
-
 print(json.dumps(data))
 
 

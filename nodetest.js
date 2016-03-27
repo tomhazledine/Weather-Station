@@ -2,6 +2,8 @@ var PythonShell = require('python-shell');
 var CronJob = require('cron').CronJob;
 var fs = require('fs');
 
+var logFilepath = './logs/logfile.csv';
+
 
 /**
  * ----------------
@@ -71,20 +73,32 @@ function runPython(){
 }
 
 function writeMessage(message){
-    fs.stat('./logs/logfile.csv', function(err,stat) {
+    fs.stat(logFilepath, function(err,stat) {
         if (err == null) {
-            process.stdout.write('Found existing logfile.csv\n');
+            process.stdout.write('Found existing logfile.\n');
         } else {
-            fs.writeFileSync('./logs/logfile.csv','time,temp,humidity,pressure\n');
-            process.stdout.write('Created new logfile.csv\n');        
+            fs.writeFileSync(logFilepath,'time,temp,humidity,pressure\n');
+            process.stdout.write('Created new logfile.\n');        
         }
     });
 
-    fs.appendFile('./logs/logfile.csv', message.trim() + '\n',function(err) {
+    fs.appendFile(logFilepath, message.trim() + '\n',function(err) {
         if (err) {
             process.stdout.write(err);
         } else {
-            process.stdout.write('Logged message to file\n===================\n');
+            process.stdout.write('Logged results to file\n===================\n');
         }
     });
+}
+
+function convertCsvIntoJson(){
+    var converter = new Converter({});
+
+    //end_parsed will be emitted once parsing finished 
+    converter.on("end_parsed", function (jsonArray) {
+       console.log(jsonArray); //here is your result jsonarray 
+    });
+
+    //read from file 
+    require("fs").createReadStream(logFilepath).pipe(converter);
 }
