@@ -16,3 +16,7 @@ Show all running screens and their names `screen -ls`
 Reconnect to a screen `screen -r <session id/name>`
 Start a screen with human name `screen -S <session name>`
 The contents of the screen are buffered so when you reconnect see the output and you can use `ctrl + pageup` but sometimes it does not work and you need enable some other stuff. It is good to write a log file whether you are running it as thread & or screen.
+
+---
+
+`USER_ID='abc' USER_KEY='def' node nodetest`

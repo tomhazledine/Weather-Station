@@ -6,6 +6,7 @@
   "dependencies": {
     "cron": "^1.1.0",
     "express": "^4.13.4",
+    "ftp-client": "^0.2.2",
     "python-shell": "^0.4.0"
   },
   "devDependencies": {},

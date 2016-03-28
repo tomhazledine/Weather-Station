@@ -1,2 +1,4 @@
 node_modules/
 logs/
+sftp-config.json
+creds.md

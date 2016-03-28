@@ -5,18 +5,48 @@ var fs = require('fs');
 var logFilepath = './logs/logfile.csv';
 
 
+var ftpClient = require('ftp-client'),
+    config = {
+        host: 'eatenbymonsters.com',
+        port: 21,
+        user: process.env.USER_ID,
+        password: process.env.USER_KEY
+    },
+    options = {
+        logging: 'basic'
+    },
+    ftp = new ftpClient(config, options);
+
+
 /**
  * ----------------
- * SETUP CRON JOB
+ * MEASURE CRON JOB
  *
- * Run a task every
- * 30 seconds.
+ * Trigger the task
+ * to record all of
+ * the measurements
+ * every 30 seconds
  * ----------------
  */
 var testCron = new CronJob('1 * * * * *',function(){
     checkFolder();
 }, null, true, 'Europe/London');
 testCron.start();
+
+
+/**
+ * ---------------
+ * UPLOAD CRON JOB
+ *
+ * Copy the log of
+ * measurements to
+ * the live server
+ * ---------------
+ */
+var uploadCron = new CronJob('0 1 * * * *',function(){
+    uploadFile();
+}, null, true, 'Europe/London');
+uploadCron.start();
 
 /**
  * ----------------
@@ -101,4 +131,17 @@ function convertCsvIntoJson(){
 
     //read from file 
     require("fs").createReadStream(logFilepath).pipe(converter);
+}
+
+function uploadFile(){
+    ftp.connect(function () {
+     
+        ftp.upload(['logs/**'], '/logs', {
+            baseDir: 'logs',
+            overwrite: 'older'
+        }, function (result) {
+            console.log(result);
+        });
+     
+    });
 }
