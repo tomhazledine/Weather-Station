@@ -29,8 +29,10 @@ var ftpClient = require('ftp-client'),
  * ----------------
  */
 var testCron = new CronJob('1 * * * * *',function(){
+    process.stdout.write('\n Starting...\n');
     checkFolder();
     uploadFile();
+    process.stdout.write('\n Finished. \n===================\n');
 }, null, true, 'Europe/London');
 testCron.start();
 
@@ -98,7 +100,7 @@ function runPython(){
     // end the input stream and allow the process to exit
     pyshell.end(function (err) {
       if (err) throw err;
-      process.stdout.write('Python task terminated\n');
+      // process.stdout.write('Python task terminated\n');
     });
 
 }
@@ -117,22 +119,22 @@ function writeMessage(message){
         if (err) {
             process.stdout.write(err);
         } else {
-            process.stdout.write('Logged results to file\n===================\n');
+            process.stdout.write('Logged results to file\n');
         }
     });
 }
 
-function convertCsvIntoJson(){
-    var converter = new Converter({});
+// function convertCsvIntoJson(){
+//     var converter = new Converter({});
 
-    //end_parsed will be emitted once parsing finished 
-    converter.on("end_parsed", function (jsonArray) {
-       console.log(jsonArray); //here is your result jsonarray 
-    });
+//     //end_parsed will be emitted once parsing finished 
+//     converter.on("end_parsed", function (jsonArray) {
+//        console.log(jsonArray); //here is your result jsonarray 
+//     });
 
-    //read from file 
-    require("fs").createReadStream(logFilepath).pipe(converter);
-}
+//     //read from file 
+//     require("fs").createReadStream(logFilepath).pipe(converter);
+// }
 
 function uploadFile(){
     ftp.connect(function () {
@@ -141,7 +143,8 @@ function uploadFile(){
             baseDir: 'logs',
             overwrite: 'older'
         }, function (result) {
-            console.log(result);
+            // console.log(result);
+            process.stdout.write('Copied file to server.\n');
         });
      
     });
