@@ -30,6 +30,7 @@ var ftpClient = require('ftp-client'),
  */
 var testCron = new CronJob('1 * * * * *',function(){
     checkFolder();
+    uploadFile();
 }, null, true, 'Europe/London');
 testCron.start();
 
@@ -43,10 +44,10 @@ testCron.start();
  * the live server
  * ---------------
  */
-var uploadCron = new CronJob('0 1 * * * *',function(){
-    uploadFile();
-}, null, true, 'Europe/London');
-uploadCron.start();
+//var uploadCron = new CronJob('0 1 * * * *',function(){
+//    uploadFile();
+//}, null, true, 'Europe/London');
+//uploadCron.start();
 
 /**
  * ----------------
