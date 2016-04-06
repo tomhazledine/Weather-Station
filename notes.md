@@ -1,4 +1,5 @@
 ssh -X pi@169.254.0.2
+sudo shutdown -h now
 
 ---
 
