@@ -149,15 +149,115 @@ e,r,o,y,g,y,o,r,
 r,o,y,g,b,g,y,o,
 o,y,g,b,i,b,g,y,
 y,g,b,i,v,i,b,g,
-o,y,g,b,i,g,g,y,
+o,y,g,b,i,b,g,y,
 r,o,y,g,b,g,y,o,
 e,r,o,y,g,y,o,r,
 e,e,r,o,y,o,r,e
 ]
 
-images = [image00,image0,image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11]
+image12 = [
+r,o,y,g,b,g,y,o,
+o,y,g,b,i,b,g,y,
+y,g,b,i,v,i,b,g,
+g,b,i,v,e,v,i,b,
+y,g,b,i,v,i,b,g,
+o,y,g,b,i,b,g,y,
+r,o,y,g,b,g,y,o,
+e,r,o,y,g,y,o,r
+]
+
+image13 = [
+o,y,g,b,i,b,g,y,
+y,g,b,i,v,i,b,g,
+g,b,i,v,e,v,i,b,
+b,i,v,e,e,e,v,i,
+g,b,i,v,e,v,i,b,
+y,g,b,i,v,i,b,g,
+o,y,g,b,i,b,g,y,
+r,o,y,g,b,g,y,o
+]
+
+image14 = [
+y,g,b,i,v,i,b,g,
+g,b,i,v,e,v,i,b,
+b,i,v,e,e,e,v,i,
+i,v,e,e,e,e,e,v,
+b,i,v,e,e,e,v,i,
+g,b,i,v,e,v,i,b,
+y,g,b,i,v,i,b,g,
+o,y,g,b,i,b,g,y
+]
+
+image15 = [
+g,b,i,v,e,v,i,b,
+b,i,v,e,e,e,v,i,
+i,v,e,e,e,e,e,v,
+v,e,e,e,e,e,e,e,
+i,v,e,e,e,e,e,v,
+b,i,v,e,e,e,v,i,
+g,b,i,v,e,v,i,b,
+y,g,b,i,v,i,b,g
+]
+
+image16 = [
+b,i,v,e,e,e,v,i,
+i,v,e,e,e,e,e,v,
+v,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+v,e,e,e,e,e,e,e,
+i,v,e,e,e,e,e,v,
+b,i,v,e,e,e,v,i,
+g,b,i,v,e,v,i,b
+]
+
+image17 = [
+i,v,e,e,e,e,e,v,
+v,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+v,e,e,e,e,e,e,e,
+i,v,e,e,e,e,e,v,
+b,i,v,e,e,e,v,i
+]
+
+image18 = [
+v,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+v,e,e,e,e,e,e,e,
+i,v,e,e,e,e,e,v
+]
+
+image19 = [
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+v,e,e,e,e,e,e,e
+]
+
+image20 = [
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e,
+e,e,e,e,e,e,e,e
+]
+
+images = [image00,image0,image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20]
 
 while True:
     for image in images:
         sense.set_pixels(image)
-        time.sleep(.1)
+        time.sleep(.05)
+    time.sleep(1)
