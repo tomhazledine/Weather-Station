@@ -29,10 +29,10 @@ var ftpClient = require('ftp-client'),
  * ----------------
  */
 var testCron = new CronJob('1 * * * * *',function(){
-    process.stdout.write('\n Starting...\n');
+    process.stdout.write('\nStarting...\n');
     checkFolder();
     uploadFile();
-    process.stdout.write('\n Finished. \n===================\n');
+    process.stdout.write('Finished.\n===================\n');
 }, null, true, 'Europe/London');
 testCron.start();
 
@@ -119,7 +119,7 @@ function writeMessage(message){
         if (err) {
             process.stdout.write(err);
         } else {
-            process.stdout.write('Logged results to file\n');
+            process.stdout.write('Logged results to file.\n');
         }
     });
 }
