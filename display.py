@@ -160,4 +160,4 @@ images = [image00,image0,image1,image2,image3,image4,image5,image6,image7,image8
 while True:
     for image in images:
         sense.set_pixels(image)
-        time.sleep(.2)
+        time.sleep(.1)
