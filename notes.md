@@ -1,3 +1,7 @@
+ssh -X pi@169.254.0.2
+
+---
+
 npm install python-shell
 npm install cron
 
